@@ -7,7 +7,6 @@ int main()
     char guessed[sizeof(secret) - 1];
     char guess;
     int hits = 0; 
-    int place = 0;
 
     //variable inittailiesieren: _______________
     for (int i = 0; i < len; i ++) {
