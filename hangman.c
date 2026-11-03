@@ -1,38 +1,45 @@
 #include <stdio.h>
 
+int countHits(const char secret[], const char guess){
+    int hits = 0;
+    for (int i = 0; i < (sizeof(secret) -1) ; i++)
+    {
+        if ((secret[i]) == guess){
+        hits++;
+        }
+    }
+    return hits;
+}
+
 int main()
 {
-    const char secret[] = "Programmieren";
-    const int len = sizeof(secret) - 1; // Anzahl der char
+    const char secret[] = "JOSEE";
+    const int len = sizeof(secret) - 1;
     char guessed[sizeof(secret) - 1];
-    char guess;
-    int hits = 0; 
+    const char guess;
 
-    //variable inittailiesieren: _______________
-    for (int i = 0; i < len; i ++) {
+    for (int i = 0; i < len; i++){
         guessed[i] = '_';
     }
-    
-    printf("Dein Guess(1 Buchstabe): ");
+
+    printf("buchstaben raten: ");
     if (scanf(" %c", &guess) != 1)
     {
-        printf("Ungueltig");
+        printf("ungueltige Eingabe\n");
         return 1;
     }
 
-    for (int i = 0; i < len - 1; i++) {
-        if ((secret[i]) == guess) {
-            hits++;
-            guessed[i] = guess;
-        }
-    }
+    /*int hits = 0;
+    for (int i = 0; i < (sizeof(secret) / sizeof(char)) -1; i++)
+    {
+        if ((secret[i]) == guess){
+        hits++;
 
-    for (int i = 0; i < len; i++) {
-        printf("%c", guessed[i]);
-        
     }
-
-    printf("\n");
-    printf("Treffer: %d\n", hits);
+    }*/
+   int hits = countHits(secret, guess);
+    
+    printf("hits: %d", hits);
+    
     return 0;
 }
