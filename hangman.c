@@ -1,45 +1,65 @@
 #include <stdio.h>
 
-int countHits(const char secret[], const char guess){
-    int hits = 0;
-    for (int i = 0; i < (sizeof(secret) -1) ; i++)
-    {
-        if ((secret[i]) == guess){
-        hits++;
+int strcmp1(const char word1[], char word2[]){
+    int i = 0;
+    while (word1[i] != '\0') {
+        if (word1[i] != word2[i]) {
+            return 0;
         }
+        i++;
     }
-    return hits;
+    return 1;
 }
 
-int main()
-{
-    const char secret[] = "JOSEE";
-    const int len = sizeof(secret) - 1;
-    char guessed[sizeof(secret) - 1];
-    const char guess;
+// word1 "HalLo\0"
+// word2 "Hallo"
+int strcmp2(const char word1[], char word2[]) {
+    int diff  = 0;
+    for (int i = 0; word1[i] != '\0'; diff |= word1[i] != word2[i], i++);
+    return !diff;
+}
 
-    for (int i = 0; i < len; i++){
+int main(){
+    const char secret[] = "Leon";
+    const char len = sizeof(secret) - 1;
+    char guessed[sizeof(secret) - 1];
+    char guess;
+    int hits = 0; 
+    int Fails;
+
+    //Füllt das Wort mit '_'
+    for (int i = 0; len > i; i++){
         guessed[i] = '_';
     }
 
-    printf("buchstaben raten: ");
-    if (scanf(" %c", &guess) != 1)
-    {
-        printf("ungueltige Eingabe\n");
-        return 1;
+    while (Fails < 5){
+        //Schaut ob die Eingabe passt
+        printf("Tippe einen Buchstabe: ");
+        if (scanf(" %c", &guess) != 1){
+            return 1;
+        }
+
+        else
+        {
+            Fails++;
+        }
+
+        //Geht durch jeden Buchstaben durch und kontrolliert ob es an der Stelle passt
+        for (int i = 0; len > i; i++){
+            secret[i] == guess;
+            hits++;
+            guessed[i] = guess;
+            printf(" %c", guessed[i]);
+        }
+
+        int Kontrolle = strcmp(secret, guessed, len, guess);
+        
+        //Printet Treffer aus
+        printf("\n");
+        printf("Treffer: %d\n", hits);
+
+        Fails += (hits == 0);
     }
 
-    /*int hits = 0;
-    for (int i = 0; i < (sizeof(secret) / sizeof(char)) -1; i++)
-    {
-        if ((secret[i]) == guess){
-        hits++;
-
-    }
-    }*/
-   int hits = countHits(secret, guess);
-    
-    printf("hits: %d", hits);
-    
     return 0;
 }
