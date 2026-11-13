@@ -1,0 +1,71 @@
+Kundenauftrag: Kleiner Fahrradverleih – Mietpreisberechnung
+Ausgangssituation
+Ich betreibe einen kleinen Fahrradverleih in meiner Gemeinde. Besonders an Wochenenden kommen viele Kunden vorbei, die Fahrräder für einige Stunden oder einen ganzen Tag ausleihen möchten.
+
+Bisher berechne ich die Mietpreise immer im Kopf. Dabei passieren gelegentlich Fehler, und es dauert unnötig lange, bis ich meinen Kunden den richtigen Preis nennen kann.
+
+Dein Anliegen
+Ich möchte ein kleines Programm, das mir bei der Berechnung der Fahrrad-Mietpreise hilft.
+
+Das Programm soll mir ermöglichen, schnell den passenden Preis für eine Ausleihe zu ermitteln. Außerdem möchte ich auf einen Blick sehen, wie viel ein Kunde insgesamt bezahlen muss.
+
+Gewünschte Funktionen
+Das Programm soll folgende Möglichkeiten bieten:
+
+1. Fahrrad auswählen: Es gibt drei verschiedene Fahrradtypen:
+
+Citybike: 5 € pro Stunde
+
+Mountainbike: 8 € pro Stunde
+
+E-Bike: 12 € pro Stunde
+
+2. Mietdauer eingeben: Der Benutzer soll angeben können, wie viele Stunden das Fahrrad ausgeliehen wird.
+
+3. Preis berechnen: Das Programm soll den Gesamtpreis anhand des ausgewählten Fahrradtyps und der Mietdauer berechnen.
+
+4. Rabatt berücksichtigen: Bei einer Mietdauer von mindestens 5 Stunden erhält der Kunde 10 % Rabatt auf den Gesamtpreis.
+
+5. Ergebnis anzeigen: Am Ende sollen der gewählte Fahrradtyp, die Mietdauer, der ursprüngliche Preis, ein möglicher Rabatt und der endgültige Zahlbetrag angezeigt werden.
+
+Bedienung
+Wenn ich das Programm starte, möchte ich zuerst eine Übersicht der verfügbaren Fahrräder mit ihren Preisen sehen.
+
+Anschließend soll ich folgende Angaben machen können:
+
+Welches Fahrrad möchte der Kunde mieten?
+
+Wie viele Stunden möchte der Kunde das Fahrrad behalten?
+
+Danach soll das Programm automatisch den Preis berechnen und übersichtlich darstellen.
+
+Falls ein ungültiger Fahrradtyp oder eine Mietdauer von 0 oder weniger Stunden eingegeben wird, soll eine verständliche Fehlermeldung erscheinen.
+
+Beispiel
+Ein Kunde möchte ein Mountainbike für 6 Stunden ausleihen.
+
+Das Programm soll folgende Informationen anzeigen:
+
+Fahrradverleih – Mietkosten
+
+Fahrradtyp: Mountainbike
+
+Stundenpreis: 8,00 €
+
+Mietdauer: 6 Stunden
+
+Grundpreis: 48,00 €
+
+Rabatt (10 %): 4,80 €
+
+Endpreis
+
+43,20 €
+Besondere Wünsche
+Das Programm soll nach einer Berechnung erneut eine Vermietung ermöglichen, ohne dass ich es neu starten muss.
+
+Ich möchte eine einfache Möglichkeit haben, das Programm zu beenden.
+
+Die Ausgaben sollen übersichtlich und leicht verständlich sein.
+
+Alle Preise sollen mit zwei Nachkommastellen angezeigt werden.
