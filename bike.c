@@ -3,7 +3,7 @@
 
 int rabatt(int hours, int prize) {
     if (hours >= 5) {
-        prize *= 0.85;
+        prize *= 0.9;
         printf("Gesamtpreis: %d Euro\n", prize);
     }
 
@@ -22,8 +22,10 @@ int main(int argc, char* argv[]) {
     int prizes[3] = {5, 8, 12};
     char* array[3] = {"Citybike", "Mountainbike", "E-Bike"};
 
+    int anzahl[3] = {10, 6, 4};
+
     int hours;
-    int prize;
+    double prize;
 
     printf("Anzahl der Stunden: ");
     scanf("%d", &hours);
