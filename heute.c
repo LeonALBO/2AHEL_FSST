@@ -29,8 +29,8 @@ char* init(int size, char c, int sz) {
 
 int main (int argc, char* argv[]) {
     char* wort = "WORT";
-    const int n = strlen(wort);
-    char wort2[n] = init(strlen(wort), '_');
+    const int n = sizeof(wort) - 1;
+    char* wort2 = init(strlen(wort), '_');
     int sz;
 
     dump(wort2);
